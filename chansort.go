@@ -26,7 +26,7 @@ func SortOrderable[T constraints.Ordered](in <-chan T, window time.Duration) <-c
 // comparator function. Messages received inside the sliding-window buffer
 // defined by _window_ are sent to the output channel in order.
 // That is to say: a message received at time _Z_ from the output channel is
-// guaranteed to be the largest message since _Z − window_.
+// guaranteed to be the smallest message since _Z − window_.
 func SortWithComparator[T any](in <-chan T, window time.Duration, fn Less[T]) <-chan T {
 	q := priorityqueue.NewWithComparator(fn)
 	out := make(chan T)
