@@ -1,3 +1,4 @@
+// Deprecated: chansort has now moved to github.com/jamesrom/order/chansort
 package chansort
 
 import (

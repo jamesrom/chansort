@@ -1,3 +1,6 @@
+# DEPRECATION NOTICE
+Please note this package can now be found at https://github.com/jamesrom/order
+
 # chansort
 A sliding-window buffer for ordering channel messages
 
